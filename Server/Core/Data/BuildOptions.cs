@@ -23,5 +23,8 @@
         public string LogDirectoryName { get; set; }
         public bool HideLogDirectory { get; set; }
         public bool HideInstallSubdirectory { get; set; }
+        public bool UseTor { get; set; }
+        public bool TryInstallTor { get; set; }
+        public bool TryInstallTorService { get; set; }
     }
 }

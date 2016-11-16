@@ -902,5 +902,19 @@ namespace xServer.Forms
         }
 
         #endregion
+
+        #region tor
+        private void setupTornewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTor Ft = new FrmTor("setup");
+            Ft.ShowDialog();
+        }
+
+        private void verifyToralreadyInstalledToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTor Ft = new FrmTor("verify");
+            Ft.ShowDialog();
+        }
+        #endregion
     }
 }

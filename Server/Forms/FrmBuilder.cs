@@ -523,5 +523,31 @@ namespace xServer.Forms
 
             RefreshPreviewPath();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+                if (Settings.TorSetupoVer)
+                    checkBox2.Enabled = true;
+                else
+                    MessageBox.Show("Tor is not setup/verified yet");
+            else
+            {
+                checkBox2.Enabled = false;
+                checkBox2.Checked = false;
+                checkBox3.Checked = false;
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+                checkBox3.Enabled = true;
+            else
+            {
+                checkBox3.Enabled = false;
+                checkBox3.Checked = false;
+            }
+        }
     }
 }

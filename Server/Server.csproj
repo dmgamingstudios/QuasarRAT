@@ -430,6 +430,12 @@
     <Compile Include="Forms\FrmTermsOfUse.Designer.cs">
       <DependentUpon>FrmTermsOfUse.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmTor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTor.Designer.cs">
+      <DependentUpon>FrmTor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmUploadAndExecute.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -525,6 +531,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmTermsOfUse.resx">
       <DependentUpon>FrmTermsOfUse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTor.resx">
+      <DependentUpon>FrmTor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmUploadAndExecute.resx">
       <DependentUpon>FrmUploadAndExecute.cs</DependentUpon>

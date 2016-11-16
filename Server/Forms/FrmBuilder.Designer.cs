@@ -125,6 +125,12 @@
             this.line10 = new xServer.Controls.Line();
             this.label14 = new System.Windows.Forms.Label();
             this.chkKeylogger = new System.Windows.Forms.CheckBox();
+            this.line11 = new xServer.Controls.Line();
+            this.label13 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picUAC2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUAC1)).BeginInit();
             this.contextMenuStrip.SuspendLayout();
@@ -137,6 +143,7 @@
             this.assemblyPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPreview)).BeginInit();
             this.surveillanceTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBuild
@@ -301,7 +308,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(17, 20);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(232, 13);
+            this.label7.Size = new System.Drawing.Size(231, 13);
             this.label7.TabIndex = 1;
             this.label7.Text = "You can choose a tag to identify your client.";
             // 
@@ -310,7 +317,7 @@
             this.lblTag.AutoSize = true;
             this.lblTag.Location = new System.Drawing.Point(17, 43);
             this.lblTag.Name = "lblTag";
-            this.lblTag.Size = new System.Drawing.Size(61, 13);
+            this.lblTag.Size = new System.Drawing.Size(60, 13);
             this.lblTag.TabIndex = 2;
             this.lblTag.Text = "Client Tag:";
             // 
@@ -363,6 +370,12 @@
             // connectionPage
             // 
             this.connectionPage.BackColor = System.Drawing.SystemColors.Control;
+            this.connectionPage.Controls.Add(this.pictureBox1);
+            this.connectionPage.Controls.Add(this.checkBox3);
+            this.connectionPage.Controls.Add(this.checkBox2);
+            this.connectionPage.Controls.Add(this.checkBox1);
+            this.connectionPage.Controls.Add(this.label13);
+            this.connectionPage.Controls.Add(this.line11);
             this.connectionPage.Controls.Add(this.numericUpDownPort);
             this.connectionPage.Controls.Add(this.numericUpDownDelay);
             this.connectionPage.Controls.Add(this.line3);
@@ -939,7 +952,7 @@
             this.lblFileVersion.AutoSize = true;
             this.lblFileVersion.Location = new System.Drawing.Point(17, 243);
             this.lblFileVersion.Name = "lblFileVersion";
-            this.lblFileVersion.Size = new System.Drawing.Size(70, 13);
+            this.lblFileVersion.Size = new System.Drawing.Size(69, 13);
             this.lblFileVersion.TabIndex = 15;
             this.lblFileVersion.Text = "File Version:";
             // 
@@ -973,7 +986,7 @@
             this.lblProductVersion.AutoSize = true;
             this.lblProductVersion.Location = new System.Drawing.Point(17, 215);
             this.lblProductVersion.Name = "lblProductVersion";
-            this.lblProductVersion.Size = new System.Drawing.Size(92, 13);
+            this.lblProductVersion.Size = new System.Drawing.Size(91, 13);
             this.lblProductVersion.TabIndex = 13;
             this.lblProductVersion.Text = "Product Version:";
             // 
@@ -1041,7 +1054,7 @@
             this.lblTrademarks.AutoSize = true;
             this.lblTrademarks.Location = new System.Drawing.Point(17, 159);
             this.lblTrademarks.Name = "lblTrademarks";
-            this.lblTrademarks.Size = new System.Drawing.Size(68, 13);
+            this.lblTrademarks.Size = new System.Drawing.Size(67, 13);
             this.lblTrademarks.TabIndex = 9;
             this.lblTrademarks.Text = "Trademarks:";
             // 
@@ -1126,6 +1139,70 @@
             this.chkKeylogger.UseVisualStyleBackColor = true;
             this.chkKeylogger.CheckedChanged += new System.EventHandler(this.chkKeylogger_CheckedChanged);
             // 
+            // line11
+            // 
+            this.line11.LineAlignment = xServer.Controls.Line.Alignment.Horizontal;
+            this.line11.Location = new System.Drawing.Point(34, 310);
+            this.line11.Name = "line11";
+            this.line11.Size = new System.Drawing.Size(351, 23);
+            this.line11.TabIndex = 19;
+            this.line11.TabStop = false;
+            this.line11.Text = "line11";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 310);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(22, 13);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "Tor";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(20, 340);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(63, 17);
+            this.checkBox1.TabIndex = 21;
+            this.checkBox1.Text = "Use Tor";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Enabled = false;
+            this.checkBox2.Location = new System.Drawing.Point(89, 340);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(105, 17);
+            this.checkBox2.TabIndex = 22;
+            this.checkBox2.Text = "Try to install tor";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Enabled = false;
+            this.checkBox3.Location = new System.Drawing.Point(201, 340);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(124, 17);
+            this.checkBox3.TabIndex = 23;
+            this.checkBox3.Text = "Try to install service";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::xServer.Properties.Resources.uac_shield;
+            this.pictureBox1.Location = new System.Drawing.Point(319, 337);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(16, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            this.tooltip.SetToolTip(this.pictureBox1, "Administrator Privileges are required to install the client in Program Files.");
+            // 
             // FrmBuilder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1161,6 +1238,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPreview)).EndInit();
             this.surveillanceTab.ResumeLayout(false);
             this.surveillanceTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1262,5 +1340,11 @@
         private System.Windows.Forms.NumericUpDown numericUpDownDelay;
         private System.Windows.Forms.NumericUpDown numericUpDownPort;
         private System.Windows.Forms.CheckBox chkHideSubDirectory;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label13;
+        private Controls.Line line11;
     }
 }

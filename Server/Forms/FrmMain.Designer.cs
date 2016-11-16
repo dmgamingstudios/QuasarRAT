@@ -87,6 +87,11 @@ namespace xServer.Forms
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.builderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.torToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setupTornewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verifyToralreadyInstalledToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip.SuspendLayout();
             this.tableLayoutPanel.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -103,7 +108,7 @@ namespace xServer.Forms
             this.lineToolStripMenuItem,
             this.selectAllToolStripMenuItem});
             this.contextMenuStrip.Name = "ctxtMenu";
-            this.contextMenuStrip.Size = new System.Drawing.Size(153, 142);
+            this.contextMenuStrip.Size = new System.Drawing.Size(150, 120);
             // 
             // connectionToolStripMenuItem
             // 
@@ -114,7 +119,7 @@ namespace xServer.Forms
             this.uninstallToolStripMenuItem});
             this.connectionToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("connectionToolStripMenuItem.Image")));
             this.connectionToolStripMenuItem.Name = "connectionToolStripMenuItem";
-            this.connectionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.connectionToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.connectionToolStripMenuItem.Text = "Connection";
             // 
             // updateToolStripMenuItem
@@ -165,7 +170,7 @@ namespace xServer.Forms
             this.actionsToolStripMenuItem});
             this.systemToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("systemToolStripMenuItem.Image")));
             this.systemToolStripMenuItem.Name = "systemToolStripMenuItem";
-            this.systemToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.systemToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.systemToolStripMenuItem.Text = "System";
             // 
             // systemInformationToolStripMenuItem
@@ -289,7 +294,7 @@ namespace xServer.Forms
             this.keyloggerToolStripMenuItem});
             this.surveillanceToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("surveillanceToolStripMenuItem.Image")));
             this.surveillanceToolStripMenuItem.Name = "surveillanceToolStripMenuItem";
-            this.surveillanceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.surveillanceToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.surveillanceToolStripMenuItem.Text = "Surveillance";
             // 
             // remoteDesktopToolStripMenuItem
@@ -332,7 +337,7 @@ namespace xServer.Forms
             this.showMessageboxToolStripMenuItem});
             this.miscellaneousToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("miscellaneousToolStripMenuItem.Image")));
             this.miscellaneousToolStripMenuItem.Name = "miscellaneousToolStripMenuItem";
-            this.miscellaneousToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.miscellaneousToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.miscellaneousToolStripMenuItem.Text = "Miscellaneous";
             // 
             // remoteExecuteToolStripMenuItem
@@ -380,12 +385,12 @@ namespace xServer.Forms
             // lineToolStripMenuItem
             // 
             this.lineToolStripMenuItem.Name = "lineToolStripMenuItem";
-            this.lineToolStripMenuItem.Size = new System.Drawing.Size(149, 6);
+            this.lineToolStripMenuItem.Size = new System.Drawing.Size(146, 6);
             // 
             // selectAllToolStripMenuItem
             // 
             this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
-            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.selectAllToolStripMenuItem.Text = "Select All";
             this.selectAllToolStripMenuItem.Click += new System.EventHandler(this.selectAllToolStripMenuItem_Click);
             // 
@@ -672,7 +677,9 @@ namespace xServer.Forms
             this.statusStrip.Dock = System.Windows.Forms.DockStyle.Fill;
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listenToolStripStatusLabel});
+            this.listenToolStripStatusLabel,
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2});
             this.statusStrip.Location = new System.Drawing.Point(0, 436);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(1022, 22);
@@ -763,11 +770,12 @@ namespace xServer.Forms
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fIleToolStripMenuItem,
             this.settingsToolStripMenuItem,
+            this.torToolStripMenuItem,
             this.builderToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(216, 25);
+            this.menuStrip.Size = new System.Drawing.Size(344, 25);
             this.menuStrip.TabIndex = 2;
             // 
             // fIleToolStripMenuItem
@@ -782,7 +790,7 @@ namespace xServer.Forms
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
@@ -806,6 +814,41 @@ namespace xServer.Forms
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 21);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(62, 17);
+            this.toolStripStatusLabel1.Text = "Tor Status:";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(52, 17);
+            this.toolStripStatusLabel2.Text = "Disabled";
+            // 
+            // torToolStripMenuItem
+            // 
+            this.torToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.setupTornewToolStripMenuItem,
+            this.verifyToralreadyInstalledToolStripMenuItem});
+            this.torToolStripMenuItem.Name = "torToolStripMenuItem";
+            this.torToolStripMenuItem.Size = new System.Drawing.Size(36, 21);
+            this.torToolStripMenuItem.Text = "Tor";
+            // 
+            // setupTornewToolStripMenuItem
+            // 
+            this.setupTornewToolStripMenuItem.Name = "setupTornewToolStripMenuItem";
+            this.setupTornewToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.setupTornewToolStripMenuItem.Text = "Setup Tor(new)";
+            this.setupTornewToolStripMenuItem.Click += new System.EventHandler(this.setupTornewToolStripMenuItem_Click);
+            // 
+            // verifyToralreadyInstalledToolStripMenuItem
+            // 
+            this.verifyToralreadyInstalledToolStripMenuItem.Name = "verifyToralreadyInstalledToolStripMenuItem";
+            this.verifyToralreadyInstalledToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.verifyToralreadyInstalledToolStripMenuItem.Text = "Verify Tor(already installed)";
+            this.verifyToralreadyInstalledToolStripMenuItem.Click += new System.EventHandler(this.verifyToralreadyInstalledToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -890,6 +933,11 @@ namespace xServer.Forms
         private System.Windows.Forms.ToolStripMenuItem elevateClientPermissionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem connectionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem remoteWebcamToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripMenuItem torToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setupTornewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verifyToralreadyInstalledToolStripMenuItem;
     }
 }
 

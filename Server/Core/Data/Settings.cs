@@ -179,6 +179,18 @@ namespace xServer.Core.Data
             }
         }
 
+        public static bool TorSetupoVer
+        {
+            get
+            {
+                return bool.Parse(ReadValueSafe("TorSetupoVer", "false"));
+            }
+            set
+            {
+                WriteValue("TorSetupoVer", value.ToString());
+            }
+        }
+
         private static string ReadValue(string pstrValueToRead)
         {
             try
